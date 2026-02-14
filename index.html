@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaPrime | Excelência e Cuidado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a2a3a;    /* Azul Marinho para contraste */
+            --accent: #ffb6c1;     /* Rosa Bebê */
+            --text: #1d1d1f;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        
+        body { 
+            background-color: #fff0f5; /* Fundo Rosa Bebê bem suave em todo o site */
+            color: var(--text); 
+            scroll-behavior: smooth; 
+        }
+
+        header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--primary);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: 600; font-size: 1.4rem; }
+        .logo span { color: var(--accent); }
+
+        /* Hero Section com a sua imagem e fundo rosa */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background: linear-gradient(90deg, #fff0f5 40%, rgba(255,240,245,0.2) 100%), 
+                        url('https://i.pinimg.com/736x/09/e6/63/09e6636b483931980e64636984cc457f.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content { max-width: 600px; }
+        .hero h1 { font-size: 3.5rem; color: var(--primary); line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: #4a4a4a; margin-bottom: 30px; }
+
+        .btn {
+            padding: 15px 35px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: var(--accent); color: var(--primary); }
+
+        /* Cards Estilizados */
+        .section { padding: 80px 8%; }
+        .section-title { margin-bottom: 50px; text-align: center; color: var(--primary); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--accent);
+            transition: 0.3s;
+        }
+
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; }
+
+        /* Tabela Profissional */
+        .table-container {
+            margin-top: 50px;
+            background: var(--primary);
+            padding: 40px;
+            border-radius: 20px;
+            color: white;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { text-align: left; padding: 15px; border-bottom: 1px solid var(--accent); }
+        td { padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        footer { text-align: center; padding: 40px; color: var(--primary); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Pharma<span>Prime</span></div>
+    <nav style="display: flex; gap: 20px;">
+        <a href="#" style="color: white; text-decoration: none; font-size: 0.8rem;">INÍCIO</a>
+        <a href="#tabela" style="color: white; text-decoration: none; font-size: 0.8rem;">CIÊNCIA</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>A ciência que cuida de você.</h1>
+        <p>Unimos o rigor técnico farmacêutico com a delicadeza do cuidado humano para garantir sua saúde plena.</p>
+        <a href="#tabela" class="btn">Saiba Mais</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-title">
+        <h2>O Pilar da Medicação Consciente</h2>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <h3>Analgésicos</h3>
+            <p>Alívio preciso e seguro para sinais de dor e desconforto.</p>
+        </div>
+        <div class="card">
+            <h3>Antibióticos</h3>
+            <p>Controle rigoroso de infecções com foco na eficácia bacteriana.</p>
+        </div>
+        <div class="card">
+            <h3>Anti-inflamatórios</h3>
+            <p>Redução de edemas e aceleração da recuperação tecidual.</p>
+        </div>
+    </div>
+
+    <div id="tabela" class="table-container">
+        <h2>Diferenciação Técnica</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Critério</th>
+                    <th>Segurança</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Medicamento Referência</td>
+                    <td>Inovação e patente original.</td>
+                    <td>Padrão Ouro</td>
+                </tr>
+                <tr>
+                    <td>Medicamento Genérico</td>
+                    <td>Mesmo princípio ativo (Faixa Amarela).</td>
+                    <td>Bioequivalente</td>
+                </tr>
+                <tr>
+                    <td>Uso Incorreto</td>
+                    <td>Riscos de automedicação e resistência.</td>
+                    <td>Alerta Crítico</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 PharmaPrime. Compromisso Ético e Profissional.
+</footer>
+
+</body>
+</html>
